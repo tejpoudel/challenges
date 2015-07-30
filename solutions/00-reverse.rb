@@ -6,6 +6,13 @@
 # Difficulty: easy.
 
 def reverse(string)
+  reversed_string = ""
+
+  original_string.each_char do |char|
+    reversed_string = char + reversed_string
+  end
+
+  return reversed_string
 end
 
 # These are tests to check that your code is working. After writing
