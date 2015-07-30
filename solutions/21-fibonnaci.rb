@@ -1,4 +1,5 @@
 # Fibonnaci using recursion
+# For a complete walk through check here: http://natashatherobot.com/recursion-factorials-fibonacci-ruby/ 
 
  def fibonnaci(n)
   if n < 2
