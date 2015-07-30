@@ -1,4 +1,3 @@
-Programming Challenges
-======================
+## Programming Challenges
 
-Sample programming challenges from AppAcademy's precourse work
+Solutions to programming challenges from AppAcademy's prep work
