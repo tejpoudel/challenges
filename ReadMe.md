@@ -1,3 +1,3 @@
-## Programming Challenges
+## Challenges
 
-Solutions to programming challenges from AppAcademy's prep work
+Ruby solutions to prep level coding challenges.
