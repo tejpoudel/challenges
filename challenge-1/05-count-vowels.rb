@@ -5,6 +5,28 @@
 # Difficulty: easy.
 
 def count_vowels(string)
+  vowels = ["a","e","i","o","u"]
+
+  count = 0
+
+  # i = 0
+  #
+  # while i < string.length
+  #   if vowels.include?(string[i])
+  #     count += 1
+  #   end
+  #    i += 1
+  #  end
+
+  string.each_char do |char|
+
+    if vowels.include?(char)
+      count += 1
+    end
+
+  end
+
+  count
 end
 
 # These are tests to check that your code is working. After writing
