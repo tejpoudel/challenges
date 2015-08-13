@@ -5,8 +5,24 @@
 #
 # Difficulty: easy.
 
-def reverse(string)
+def reverse(original_string)
   reversed_string = ""
+
+  # i = 0
+  #
+  # while i < original_string.length
+  #   reversed_string = original_string[i] + reversed_string
+  #   i += 1
+  # end
+
+  # Second while loop implementation
+  #
+  # i = original_string.length - 1
+  #
+  # while i >= 0
+  #   reversed_string += original_string[i]
+  #   i -= 1
+  # end
 
   original_string.each_char do |char|
     reversed_string = char + reversed_string
@@ -21,29 +37,3 @@ end
 puts('reverse("abc") == "cba": ' + (reverse("abc") == "cba").to_s)
 puts('reverse("a") == "a": ' + (reverse("a") == "a").to_s)
 puts('reverse("") == "": ' + (reverse("") == "").to_s)
-
-def reverse(string)
-  new_string = ''
-
-  i = string.length - 1
-
-  while i >= 0
-    new_string += string[i]
-    i -= 1
-  end
-
-  new_string
-end
-
-# These are tests to check that your code is working. After writing
-# your solution, they should all print true.
-
-puts(
-  'reverse("abc") == "cba": ' + (reverse("abc") == "cba").to_s
-)
-puts(
-  'reverse("a") == "a": ' + (reverse("a") == "a").to_s
-)
-puts(
-  'reverse("") == "": ' + (reverse("") == "").to_s
-)
