@@ -10,7 +10,8 @@ def nearby_az(string)
 a_position = 0
 z_position = 0
 
-# Only run loop if it contains an 'a' or 'z'
+  # Only run loop if it contains an 'a' or 'z'
+
   if (string.include? "a") && (string.include? "z")
     string.each_char do |character|
       if character == "a"
@@ -20,6 +21,8 @@ z_position = 0
       end
     end
 
+  # Ascertain positions of 'z' and 'a'
+
     if (z_position - a_position) > 3
       false
     elsif z_position < a_position
@@ -27,6 +30,8 @@ z_position = 0
     else
       true
     end
+
+  # Return false if the string does n't contain an 'a' or 'z'
 
   else
     false
