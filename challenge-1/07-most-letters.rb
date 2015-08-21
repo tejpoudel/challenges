@@ -4,8 +4,35 @@
 #
 # Difficulty: medium.
 
+
 def nearby_az(string)
+
+a_position = 0
+z_position = 0
+
+# Only run loop if it contains an 'a' or 'z'
+  if (string.include? "a") && (string.include? "z")
+    string.each_char do |character|
+      if character == "a"
+        a_position = string.index('a')
+      elsif character == "z"
+        z_position = string.index('z')
+      end
+    end
+
+    if (z_position - a_position) > 3
+      false
+    elsif z_position < a_position
+      false
+    else
+      true
+    end
+
+  else
+    false
+  end
 end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
