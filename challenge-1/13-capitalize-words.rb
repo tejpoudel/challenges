@@ -10,24 +10,23 @@
 
 def capitalize_words(string)
 
-  # Split the string to get an array
   words = string.split(" ")
 
-  # Create a final array to store the capitalized words
-  final_array = []
-
-  # Now loop over each word in the array
   i = 0
 
   until i == words.length
-  # Get the first character of each word inside the array
-  # store it back inside the array
+    words.each do |word|
+      word.each_char do |char|
+        if word.index(char) == 0
+          char.upcase!
+        end
+      end
+    end
 
-    final_array.push(words[i][0].upcase!)
-     i = i + 1
+    i += 1
   end
 
-  final_array.join(" ")
+  puts words.join(" ")
 
 end
 
