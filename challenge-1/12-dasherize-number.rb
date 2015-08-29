@@ -16,13 +16,14 @@ def dasherize_number(num)
     elsif digit.to_i % 2 != 0
        string += ("-" + digit + "-")
     end
+
+    string.gsub!(/--/, "-")
+
   end
 
   string[-1] = "" if string.end_with? "-"
 
   string[0] = "" if string.start_with? "-"
-
-  string.gsub!(/--/, "-")
 
   string
 
