@@ -9,7 +9,7 @@ def reverse(original_string)
   reversed_string = ""
 
   # i = 0
-  #
+
   # while i < original_string.length
   #   reversed_string = original_string[i] + reversed_string
   #   i += 1
@@ -17,16 +17,16 @@ def reverse(original_string)
 
   # Second while loop implementation
   #
-  # i = original_string.length - 1
-  #
-  # while i >= 0
-  #   reversed_string += original_string[i]
-  #   i -= 1
-  # end
+  i = original_string.length
 
-  original_string.each_char do |char|
-    reversed_string = char + reversed_string
+  while i >= 0
+    reversed_string = reversed_string.concat + original_string[i].to_s
+    i -= 1
   end
+  #
+  # original_string.each_char do |char|
+  #   reversed_string = char + reversed_string
+  # end
 
   return reversed_string
 end
