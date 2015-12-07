@@ -8,16 +8,22 @@
 # Difficulty: medium.
 
 def is_power_of_two?(num)
+  # What is a power of two? -- An exponent to the base of 2
+  # i.e you can multiply 2 by itself a certain number of times and get that result of that number
+  # which is being checked eg 2**3 is 6. So 6 is a power of 2 because you can multiply 2 by itself
+  # 3 times to get it.
 
-  # I - Inputs -- integers
-  # P - Check if number is less than 1, if it is return false
-    # - If number is greater than 1, use modulo division
-  # O - Outputs -- boolean
-  #
-  # Hint: Use modulo, since if is mentioned we need a conditional
-  # Constraint: Any number ==1, returns true because one is a power of 2
-
-  return false if num == 0
+  # Steps
+  # Get a number, divide it by 2
+  # Repeat division by 2 until you get to its base case which is one.
+  # Return true because that number is a power of 2, only when the original number's value is one.
+  # When you try to repeatedly divide the number by 2 and it does n't give a modulo result of zero
+  # Then that number is not a power of 2
+  # Note: A power of 2 returns one as its final result when divided continously by 2 whereas a non power of 2
+  # does n't.
+  if num < 1
+    return false
+  end
 
   while true
     if num == 1
@@ -28,7 +34,6 @@ def is_power_of_two?(num)
       return false
     end
   end
-
 end
 
 # These are tests to check that your code is working. After writing
