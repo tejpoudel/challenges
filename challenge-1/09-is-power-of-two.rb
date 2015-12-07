@@ -8,6 +8,23 @@
 # Difficulty: medium.
 
 def is_power_of_two?(num)
+
+  # I - Inputs -- integers
+  # P - Check if number is less than 1, if it is return false
+    # - If number is greater than 1, use modulo division
+  # O - Outputs -- boolean
+  #
+  # Hint: Use modulo, since if is mentioned we need a conditional
+  # Constraint: Any number ==1, returns true because one is a power of 2
+
+  return true if num == 1
+
+  if num % 2 == 0
+    true
+  else
+    false
+  end
+
 end
 
 # These are tests to check that your code is working. After writing
