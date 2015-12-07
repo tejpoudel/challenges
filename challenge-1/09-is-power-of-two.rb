@@ -17,12 +17,16 @@ def is_power_of_two?(num)
   # Hint: Use modulo, since if is mentioned we need a conditional
   # Constraint: Any number ==1, returns true because one is a power of 2
 
-  return true if num == 1
+  return false if num == 0
 
-  if num % 2 == 0
-    true
-  else
-    false
+  while true
+    if num == 1
+      return true
+    elsif num % 2 == 0
+      num = num / 2
+    else
+      return false
+    end
   end
 
 end
