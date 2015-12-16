@@ -8,20 +8,23 @@ def lucky_sevens?(numbers)
 
   index = 0
 
-  while index < numbers.length
+  until index == numbers.length
+
     ## Need to catch an out of range exception here
-    sum = numbers[index] + numbers[index + 1] + numbers[index + 2]
-    final_array << sum
+    begin
+      sum = numbers[index] + numbers[index + 1] + numbers[index + 2]
+      final_array << sum
+    rescue
+      nil
+    end
     index += 1
   end
-
-  puts final_array
 
   final_array.include?(7)
 
 end
 
-puts lucky_sevens?([2,1,5])
+puts lucky_sevens?([1,1,5])
 puts lucky_sevens?([2,1,5,1,0])
 puts lucky_sevens?([0,-2,1,8])
 puts lucky_sevens?([7,7,7,7])
