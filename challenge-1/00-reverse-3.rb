@@ -6,13 +6,16 @@
 # Difficulty: easy.
 
 def reverse(original_string)
-    i = original_string.length
+
+  reversed_string = ""
+
+  i = original_string.length
 
   while i >= 0
     reversed_string = reversed_string.concat + original_string[i].to_s
     i -= 1
   end
-  
+
   return reversed_string
 end
 
