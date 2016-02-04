@@ -7,6 +7,8 @@
 
 def reverse(original_string)
 
+  reversed_string = ""
+
   original_string.each_char do |char|
     reversed_string = char + reversed_string
   end
