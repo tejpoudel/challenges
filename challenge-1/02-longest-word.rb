@@ -8,8 +8,6 @@
 
 def longest_word(sentence)
 
-  # longest_word_count = 0
-
   longest_word = ""
 
   words = sentence.split(" ")
