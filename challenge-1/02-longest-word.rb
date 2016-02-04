@@ -8,7 +8,7 @@
 
 def longest_word(sentence)
 
-  longest_word_count = 0
+  # longest_word_count = 0
 
   longest_word = ""
 
@@ -22,7 +22,7 @@ def longest_word(sentence)
 
   words.each do |word|
 
-    if longest_word_count < word.length
+    if longest_word.length < word.length
      longest_word = word
     else
       longest_word
