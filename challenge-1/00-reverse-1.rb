@@ -6,27 +6,10 @@
 # Difficulty: easy.
 
 def reverse(original_string)
-  reversed_string = ""
 
-  # i = 0
-
-  # while i < original_string.length
-  #   reversed_string = original_string[i] + reversed_string
-  #   i += 1
-  # end
-
-  # Second while loop implementation
-  #
-  i = original_string.length
-
-  while i >= 0
-    reversed_string = reversed_string.concat + original_string[i].to_s
-    i -= 1
+  original_string.each_char do |char|
+    reversed_string = char + reversed_string
   end
-  #
-  # original_string.each_char do |char|
-  #   reversed_string = char + reversed_string
-  # end
 
   return reversed_string
 end
