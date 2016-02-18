@@ -5,6 +5,29 @@
 # Difficulty: medium.
 
 def most_common_letter(string)
+ highest_count  = 0
+
+ highest_letter =""
+
+ string.each_char do |current_character|
+
+  # Loop through each character
+  # Count it in the context of the string
+  # eg: "alvin" --> "alvin".count('a')
+  # Store the return value of the count in a variable
+  # Move to the next character and repeat the process
+  # Now if the count of the next character is higher than that of the previous, then swap counts
+  # Repeat until end
+
+    current_count = string.count(current_character)
+
+    if current_count > highest_count
+      highest_count = current_count
+      highest_letter = current_character
+    end
+  end
+
+  [highest_letter, highest_count]
 end
 
 # These are tests to check that your code is working. After writing
