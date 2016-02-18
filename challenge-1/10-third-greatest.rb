@@ -5,6 +5,8 @@
 # Difficulty: medium.
 
 def third_greatest(nums)
+  nums.sort!.reverse!
+  nums[2]
 end
 
 # These are tests to check that your code is working. After writing
