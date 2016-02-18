@@ -4,6 +4,7 @@
 # Difficulty: easy.
 
 def sum_nums(num)
+  (0..num).inject(:+)
 end
 
 # These are tests to check that your code is working. After writing
