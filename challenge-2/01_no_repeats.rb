@@ -19,20 +19,38 @@ def no_repeat?(year)
   check_array = []
 
   year.to_s.each_char do |number|
-    return false if check_array.includes?(number)
+    return false if check_array.include?(number)
     check_array << number
   end
 
   return true
 end
 
-puts no_repeats(1234, 1234) #.should == [1234]
-puts no_repeats(1123, 1123) #.should == []
-puts no_repeats(1980, 1987) #.should == [ 1980, 1982, 1983, 1984, 1985, 1986, 1987]
-
-
 
 def no_repeats(year_start, year_end)
 
+  # check for unique years with no repeated numbers
+  # I - numbers
+  # Processing -
+  #
+    # Go through the years one at a time
+    # Check if each number is unique in the year
+    # If it is so, add it to a unique array
+    # Then move on to the next year and repeat the process
+    # When complete return the array of unique years
+  #
+  # O - array
+
+  unique_array = []
+
+  (year_start..year_end).each do |individual_year|
+    unique_array << individual_year if no_repeat?(individual_year)
+  end
+
+  return unique_array
 
 end
+
+puts no_repeats(1234, 1234) #.should == [1234]
+puts no_repeats(1123, 1123) #.should == []
+puts no_repeats(1980, 1987) #.should == [ 1980, 1982, 1983, 1984, 1985, 1986, 1987]
