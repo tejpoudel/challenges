@@ -13,7 +13,7 @@ def dasherize_number(num)
   i = 0
 
   old_string = num.to_s
-  while i < old_string.length
+  while i < old_string.length # Note: Krissa please don't make the while gods angry....
 
     # Get the current number
     digit = old_string[i].to_i
