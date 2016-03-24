@@ -7,6 +7,45 @@
 # Difficulty: hard.
 
 def num_repeats(string)
+  # What does it this want: Count the actual repeating letters
+  # Constraint: Unique letters that repeat, not how many times they repeat
+
+  # I - String
+  # O - Integer
+
+  # Kindergaten steps
+  # Loop over all the characters in the string
+  # Using that character as counting point
+  # While counting the numnber of times they appear.
+  # If it appears more than once store in the a letter count array
+  # Repeat and then return the answer
+  # "alvina"
+  # I would use "a" as a count paramenter and do this: string.count("a")
+  # If a > 1
+  # Add it to the list of letters that repeat.
+
+  minor_bag = [] # Stores the letters that repeat during the computation
+
+  string.each_char do |character|
+
+    if string.count(character) > 1
+      unless minor_bag.include?(character)
+        minor_bag.push(character)
+      end
+    end
+
+  end
+
+  minor_bag.size
+
+
+  # If using a double while loop
+  # You would need to check for the previous indices
+  # After you do the usual computation
+  # You would then use an if statement to check if the current index is greater than the first index
+  # If that is so
+  # You would compare the current index to the first index moving upwards until the current index
+  # Only then would your solution be valid
 end
 
 # These are tests to check that your code is working. After writing
