@@ -1,58 +1,77 @@
-# Write a method that takes in a string and returns the number of
-# letters that appear more than once in the string. You may assume
-# the string contains only lowercase letters. Count the number of
-# letters that repeat, not the number of times they repeat in the
-# string.
-#
-# Difficulty: hard.
+# Num Repeats #20
+# Write a method that takes in a string and returns the number of letters that
+# appear more than once in the string.
+# You may assume the string contains only lowercase letters. Count the number of
+# letters that repeat, not the number of times they repeat in the string.
 
 def num_repeats(string)
-  # What does it this want: Count the actual repeating letters
-  # Constraint: Unique letters that repeat, not how many times they repeat
 
-  # I - String
-  # O - Integer
+count = 0
 
-  # Kindergaten steps
-  # Loop over all the characters in the string
-  # Using that character as counting point
-  # While counting the numnber of times they appear.
-  # If it appears more than once store in the a letter count array
-  # Repeat and then return the answer
-  # "alvina"
-  # I would use "a" as a count paramenter and do this: string.count("a")
-  # If a > 1
-  # Add it to the list of letters that repeat.
+i = 0
 
-  minor_bag = [] # Stores the letters that repeat during the computation
+minor_bag = []
 
-  string.each_char do |character|
+while i < string.length
 
-    if string.count(character) > 1
-      unless minor_bag.include?(character)
-        minor_bag.push(character)
+    j = i + 1
+
+    while j <= string.length
+
+        if string[i] == string[j]
+          count += 1
+          unless minor_bag.include?(string[j])
+              minor_bag.push(string[j])
+          end
+        end
+
+  # You would need to check for the previous indices
+  # For that you would then use an if statement to check if the current
+  # index is greater than the first index
+  # If that is so
+  # You would compare the current index to the first index moving upwards
+  # until the current index
+  # Only then would your solution be valid
+
+    if j > string.index(string[0])
+    # compare j to the first index
+    # compare j to the second index
+    # compare j to the next index up until the current j value
+      k = 0 # This will refer to the first letter/index in the original string
+
+      previous_count = 0
+
+      while k < j
+        if string[j] == string[k]
+          previous_count += 1
+          # store the letter somewhere
+          unless minor_bag.include?(string[k])
+            minor_bag.push(string[k])
+          end
+        end
+
+        k += 1
       end
+
     end
+
+    j += 1
 
   end
 
-  minor_bag.size
-
-
-  # If using a double while loop
-  # You would need to check for the previous indices
-  # After you do the usual computation
-  # You would then use an if statement to check if the current index is greater than the first index
-  # If that is so
-  # You would compare the current index to the first index moving upwards until the current index
-  # Only then would your solution be valid
+  i += 1
 end
 
-# These are tests to check that your code is working. After writing
-# your solution, they should all print true.
+# You would have a list of the letters that repeat and get their size.
 
-puts('num_repeats("abdbc") == 1: ' + (num_repeats('abdbc') == 1).to_s)
-# one character is repeated
+minor_bag.size
+
+end
+
+
+#These are tests to check that your code is working. After writing your solution, they should all print true.
+
+puts('num_repeats("abdbc") == 1: ' + (num_repeats('abdbc') == 1).to_s) # one character is repeated
 puts('num_repeats("aaa") == 1: ' + (num_repeats('aaa') == 1).to_s)
 puts('num_repeats("abab") == 2: ' + (num_repeats('abab') == 2).to_s)
 puts('num_repeats("cadac") == 2: ' + (num_repeats('cadac') == 2).to_s)
