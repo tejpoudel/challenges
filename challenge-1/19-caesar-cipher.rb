@@ -48,8 +48,18 @@ def caesar_cipher(offset, string)
 
   string.each_char do |character|
 
+      # Add a conditonal for a case where the character is a space
+      # Do nothing to it
+      # Just add it in
+
+    if character == " "
+      new_string += character
+    end
+  # Should only execute if current chaacter is not a space
+
+    unless character == " "
       new_ascii_code = character.ord + offset
-    
+
       if new_ascii_code > "z".ord
         result = new_ascii_code - "z".ord
         new_character = ("a".ord + result-1).chr
@@ -57,10 +67,12 @@ def caesar_cipher(offset, string)
         new_character = new_ascii_code.chr
       end
 
-    new_string += new_character.to_s
+      new_string += new_character.to_s
+    end
+
   end
 
-  puts new_string
+  new_string
 
   # new_string.insert(white_space_location, 32.chr) if !white_space_location.nil?
 
