@@ -15,41 +15,23 @@ def two_sum(nums)
     # Repeat the same process for each of the rest of numbers
   # O - Array of Numbers
 
+  first_index = 0
 
-   first_number = 0
+  while first_index < nums.size
 
-   while first_number < nums.size
+    second_index = first_index + 1
 
-     next_number = first_number + 1
+    while second_index < nums.size
 
-     while next_number < nums.size
+      if nums[first_index] + nums[second_index] == 0
+        return [nums.index(first_index), nums.index(second_index)]
+      end
 
-       if first_number + next_number == 0
-         result = [nums.index(first_number), nums.index(next_number)]
-         return results
-       end
+      second_index += 1
+    end
 
-       if next_number > 0
-
-         initial_number = 0
-
-         until initial_number == next_number do
-           if next_number + initial_number == 0
-             result = [nums.index(next_number), nums.index(initial_number)]
-             return results
-           end
-
-           initial_number += 1
-         end
-       end
-
-       next_number += 1
-     end
-
-     first_number += 1
-   end
-
-   puts result
+    first_index += 1
+  end
 
 end
 
