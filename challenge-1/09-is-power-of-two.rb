@@ -10,7 +10,7 @@
 def is_power_of_two?(num)
   # What is a power of two? -- An exponent to the base of 2
   # i.e you can multiply 2 by itself a certain number of times and get that result of that number
-  # which is being checked eg 2**3 is 6. So 6 is a power of 2 because you can multiply 2 by itself
+  # which is being checked eg 2**3 is 8. So 8 is a power of 2 because you can multiply 2 by itself
   # 3 times to get it.
 
   # Steps
@@ -26,7 +26,7 @@ def is_power_of_two?(num)
   end
 
   while true
-    if num == 1
+    if num == 1 # You have come to the lowest value possible after diving by 2
       return true
     elsif num % 2 == 0
       num = num / 2
