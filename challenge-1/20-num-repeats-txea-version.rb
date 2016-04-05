@@ -14,16 +14,16 @@ minor_bag = []
 
 while i < string.length
 
-    j = i + 1
+  j = i + 1
 
-    while j <= string.length
+  while j <= string.length
 
-        if string[i] == string[j]
-          count += 1
-          unless minor_bag.include?(string[j])
-              minor_bag.push(string[j])
-          end
-        end
+    if string[i] == string[j]
+      count += 1
+      unless minor_bag.include?(string[j])
+          minor_bag.push(string[j])
+      end
+    end
 
   # You would need to check for the previous indices
   # For that you would then use an if statement to check if the current
@@ -57,10 +57,10 @@ while i < string.length
 
     j += 1
 
-  end
+    end
 
-  i += 1
-end
+    i += 1
+  end
 
 # You would have a list of the letters that repeat and get their size.
 
