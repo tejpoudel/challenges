@@ -23,6 +23,32 @@ def is_prime?(number)
 end
 
 def nth_prime(n)
+
+  # I - Integer
+  # P -
+  # O - Integer
+  #
+  # Constraints: The loop must execute at least 2(n + 1) times to check multiple numbers starting from 1
+  #
+  # Summary: Return the value of the prime number at that particular index
+  #
+  # Process
+  # 1. Start counting all the prime numbers starting from one
+  # 2. For a given n, the sample size of the array of prime numbers should n + 1
+  # 3. Call is_prime on each of the numbers starting from n
+  # 4. If the number is prime store it in an array
+  # 5. Get the index n-1 from the prime numbers array, and return it.
+
+  prime_array = []
+
+  ((n)*3).times do |number|
+    if is_prime?(number)
+      prime_array << number
+    end
+  end
+
+  prime_array[n-1]
+
 end
 
 # These are tests to check that your code is working. After writing
