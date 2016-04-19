@@ -1,4 +1,4 @@
-require '03_ordered_vowels'
+require './03_ordered_vowels'
 require 'rspec'
 
 # Write a method, `ordered_vowel_words(str)` that takes a string of

@@ -1,4 +1,4 @@
-require '07_rectangle_intersection'
+require './07_rectangle_intersection'
 require 'rspec'
 
 # Write a function, `rec_intersection(rect1, rect2)` and returns the

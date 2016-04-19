@@ -1,4 +1,4 @@
-require '01_no_repeats'
+require './01_no_repeats'
 require 'rspec'
 
 # Write a function, `no_repeats(year_start, year_end)`, which takes a

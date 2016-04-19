@@ -1,4 +1,4 @@
-require '04_wonky_coins'
+require './04_wonky_coins'
 require 'rspec'
 
 # Catsylvanian money is a strange thing: they have a coin for every

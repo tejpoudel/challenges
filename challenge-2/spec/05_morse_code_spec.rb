@@ -1,4 +1,4 @@
-require '05_morse_code'
+require './05_morse_code'
 require 'rspec'
 
 # Build a function, `morse_encode(str)` that takes in a string (no

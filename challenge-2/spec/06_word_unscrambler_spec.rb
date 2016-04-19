@@ -1,4 +1,4 @@
-require 'rspec'
+require './rspec'
 require '06_word_unscrambler'
 
 # Write a function word_unscrambler that takes two inputs: a scrambled

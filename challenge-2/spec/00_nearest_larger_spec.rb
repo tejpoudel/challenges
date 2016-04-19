@@ -1,4 +1,4 @@
-require '00_nearest_larger'
+require './00_nearest_larger'
 require 'rspec'
 
 # Write a function, `nearest_larger(arr, i)` which takes an array and an

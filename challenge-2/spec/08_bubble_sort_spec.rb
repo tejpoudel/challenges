@@ -1,4 +1,4 @@
-require '08_bubble_sort'
+require './08_bubble_sort'
 require 'rspec'
 
 # Write a function `bubble_sort(arr)` which will sort an array of

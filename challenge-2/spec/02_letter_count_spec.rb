@@ -1,4 +1,4 @@
-require '02_letter_count'
+require './02_letter_count'
 require 'rspec'
 
 # Write a function, `letter_count(str)` that takes a string and
