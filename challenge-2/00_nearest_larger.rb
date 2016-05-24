@@ -34,11 +34,14 @@ def nearest_larger(array, index)
 
   input_value = array[index]
 
-  return_value = nil
+  return_value = 0
 
   array.each do |number|
-    if number > input_value 
+    if number > input_value # Check for distance to the input index to pass the last test
       return_value = number
+      break
+    else
+      return_value = nil
     end
   end
 
