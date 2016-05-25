@@ -24,7 +24,7 @@ def two_sum(nums)
     while second_index < nums.size
 
       if nums[first_index] + nums[second_index] == 0
-        return [nums.index(first_index), nums.index(second_index)]
+        return [first_index, second_index]
       end
 
       second_index += 1
