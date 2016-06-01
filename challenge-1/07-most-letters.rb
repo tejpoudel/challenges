@@ -13,13 +13,10 @@ z_position = 0
   # Only run loop if it contains an 'a' or 'z'
 
   if (string.include? "a") && (string.include? "z")
-    string.each_char do |character|
-      if character == "a"
-        a_position = string.index('a')
-      elsif character == "z"
-        z_position = string.index('z')
-      end
-    end
+
+    # Set positions of 'z' and 'a'
+    a_position = string.index('a')
+    z_position = string.index('z')
 
   # Ascertain positions of 'z' and 'a'
 
